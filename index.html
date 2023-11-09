@@ -7,85 +7,173 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <title>Sabrina Tan Portfolio</title>
+    <title>Sabrina Tan's Portfolio</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="left">Sabrina Tan's Portfolio</div>
+            <div class="left">An Artistic Journey</div>
             <div class="right">
-                <ul>
-                    <li><a href="/">Home </a></li>
-                    <li><a href="/">About </a></li>
-                    <li><a href="/">Projects </a></li>
-                    <li><a href="/">Contact Me </a></li>
+
+                <div class="mobile-menu-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="desktop-menu">
+                    <li><a href="javascript:void(0);" onclick="showTab('first')">Home</a></li>
+                    <li><a href="javascript:void(0);" onclick="showTab('second')">Projects</a></li>
+                    <li><a href="javascript:void(0);" onclick="showTab('third')">About</a></li>
+
+                    <li><a href="javascript:void(0);" onclick="showTab('fourth')">Contact Me</a></li>
+                    
                 </ul>
             </div>
         </nav>
-    </header>
-    <main>
+</header>
+    <script>
+        function showTab(tabName) {
+            // Hide all content sections
+            var sections = document.querySelectorAll('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add('hidden');
+            }
+        
+            // Show the selected content section
+            var selectedSection = document.querySelector('.' + tabName + 'Section');
+            if (selectedSection) {
+                selectedSection.classList.remove('hidden');
+            }
+        
+            // Highlight the active navigation link
+            var navLinks = document.querySelectorAll('.desktop-menu li a');
+            for (var i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.remove('active-tab');
+            }
+            var activeLink = document.querySelector('.desktop-menu li a[href="javascript:void(0);"][onclick*="' + tabName + '"]');
+            if (activeLink) {
+                activeLink.classList.add('active-tab');
+            }
+        }
+        // Mobile menu
+    var navLinksMobile = document.querySelectorAll('.mobile-menu li a');
+    for (var i = 0; i < navLinksMobile.length; i++) {
+        navLinksMobile[i].classList.remove('active-tab');
+        if (navLinksMobile[i].getAttribute('data-tab') === tabName) {
+            navLinksMobile[i].classList.add('active-tab');
+        }
+    }
+        
+        // Initially, display the "Home" tab and highlight the "Home" link
+        showTab('first');
+        
+    </script>
+    <script>
+        // JavaScript for mobile menu toggle
+var mobileMenuButton = document.querySelector('.mobile-menu-button');
+var desktopMenu = document.querySelector('.desktop-menu');
+
+mobileMenuButton.addEventListener('click', function () {
+    desktopMenu.classList.toggle('show-menu');
+});
+
+    </script>
+
+<main>
         <section class="firstSection">
            <div class="leftSection">
-            Hi, My Name is <br><span class="purple">Sabrina Tan</span>
-            <div>And I am a passionate</div>
+            Welcome to 
             <span id="element"></span>
            </div>
            <div class="rightSection">
             <img src="bg.png" alt="">
            </div>
         </section>
-<hr>        
-        <section class="secondSection">
-            <span class="text-gray">What I have done so far</span>
-            <h1>Work Experience</h1>
+     
 
-          <div class="box">
-            <div class="vertical">
-                <img class="image1" src="1.jpg" alt="">
-              <div class="vertical-title">Face</div>
-              <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique eveniet natus atque ab eligendi repudiandae facere distinctio dolores eius?</div>
-                 
-            </div>
-            <div class="vertical">
-                <img class="image1" src="2.webp" alt="">
-              <div class="vertical-title">Face</div>
-              <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique eveniet natus atque ab eligendi repudiandae facere distinctio dolores eius?</div>
-                 
-            </div>
-            <div class="vertical">
-                <img class="image1" src="3.jpeg" alt="">
-              <div class="vertical-title3">Face</div>
-              <div class="vertical-desc3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique eveniet natus atque ab eligendi repudiandae facere distinctio dolores eius?</div>
+            <section class="secondSection hidden">
+                <h1>Explore The World of Artistic Projects</h1>
+            
+            
+<div class="image-container">
+<h2 class="bgimage">Sketchbook Showcase</h2>
+<img src="IMG_7911.jpg" alt="Sketchbook Image 1">
+<img src="IMG_7912.jpg" alt="Sketchbook Image 2">
+<img src="IMG_7913.jpg" alt="Sketchbook Image 3">
+<img src="IMG_7914.jpg" alt="Sketchbook Image 4">
+<img src="IMG_7915.jpg" alt="Sketchbook Image 5">
+<img src="IMG_7916.jpg" alt="Sketchbook Image 6">
+<img src="IMG_7917.jpg" alt="Sketchbook Image 7">
+<img src="IMG_7918.jpg" alt="Sketchbook Image 8">
 </div>
-            <div class="vertical">
-                <img class="image1" src="4.jpeg" alt="">
-              <div class="vertical-title">Face</div>
-              <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique eveniet natus atque ab eligendi repudiandae facere distinctio dolores eius?</div>
+
+<div class="image-container">
+<h2 class="bgimage">Drawing Fundamentals</h2>
+<img src="Drawing Fundamental1.jpg" alt="Drawing Fundamentals Image 1">
+<img src="Drawing Fundamental2.jpg" alt="Drawing Fundamentals Image 2">
+<img src="Drawing Fundamental3.jpg" alt="Drawing Fundamentals Image 3">
+<img src="Drawing Fundamental4.jpg" alt="Drawing Fundamentals Image 4">
+<img src="Drawing Fundamental5.jpg" alt="Drawing Fundamentals Image 5">
+<img src="Drawing Fundamental6.jpg" alt="Drawing Fundamentals Image 6">
+<img src="Drawing Fundamental7.jpg" alt="Drawing Fundamentals Image 7">
+<img src="Drawing Fundamental8.jpg" alt="Drawing Fundamentals Image 8">
 </div>
-            <div class="vertical">
-                <img class="image1" src="1.jpg" alt="">
-              <div class="vertical-title">Face</div>
-              <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique eveniet natus atque ab eligendi repudiandae facere distinctio dolores eius?</div>
-                 </div>
-          </div>
+            
+                <div class="image-container">
+                    <h2 class="bgimage">2D Fundamentals</h2>
+                    <img src="2D.png" alt="2D Fundamentals Image 1">
+                </div>
+            
+                <div class="image-container">
+                    <h2 class="bgimage">3D Fundamentals</h2>
+                    <img src="3D1.jpg" alt="3D Fundamentals Image 1">
+                    <img src="3D2.png" alt="3D Fundamentals Image 2">
+                    <img src="3D3.png" alt="3D Fundamentals Image 3">
+                    <img src="3D4.png" alt="3D Fundamentals Image 4">
+                    <img src="3D5.png" alt="3D Fundamentals Image 5">
+                    <img src="3D6.png" alt="3D Fundamentals Image 6">
+                    <img src="3D7.png" alt="3D Fundamentals Image 7">
+                    <img src="3D8.png" alt="3D Fundamentals Image 8">
+                
+                </div>
+            </section>
 
- </section></main>
+ <section class="thirdSection hidden">
+    <h1>The Artist Behind the Canvas</h1>
+    <p>Sabrina Tan is an aspiring artist based in Singapore. <br> She is passionate about creating art that reflects her experiences, emotions, and the beauty of everyday life. <br> Sabrina's work is known for its vibrant colors, intricate details, and the ability to evoke deep emotions in the viewer.</p>
+    <p>She believes that art is a universal language that can bridge gaps and connect people from different backgrounds. <br>Sabrina's artistic journey is a reflection of her curiosity, creativity, and the exploration of various artistic mediums.</p>
+</section>
 
+<section class="fourthSection hidden">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>Feel free to get in touch with me using the contact information below:</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:your@email.com">sabrinatanzhenya@gmail.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+    </div>
+</section>
+
+</main>
 <footer>
-        <div class="footer">
-            <div class="firstfooter">
-                <h3>Sabrina's Art Portfolio</h3>
-            </div>
-            <div class="secondfooter"></div>
-            <div class="thirdfooter"></div>
-            <div class="forthfooter"></div>
-        </div> </footer>
+    <div class="centered-footer-content">
+        <!-- Your footer content goes here -->
+        <p class="Sabrina"> SABRINA TAN ZHEN YA</p>
+        <p class="email"><a href="mailto:sabrinatanzhenya@gmail.com">sabrinatanzhenya@gmail.com</a></p>
+        <p class="copy">&copy; 2023 By Sabrina Tan</p>
+    </div>
+</footer>
+
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Art Student', '&amp; Graphic Desginer'],
-          typeSpeed: 50,
+          strings: ['my artistic journey, a visual exploration of my passion, creativity, and the evolution of my craft.'],
+          typeSpeed: 52,
         });
       </script>
+     
 </body>
 </html>

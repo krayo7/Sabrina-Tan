@@ -32,17 +32,20 @@ nav ul li a:hover{
     font-size: 1.01rem;
 }
 .left{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 .firstSection{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 90px 0;
+    padding: 80px 0;
+    background-image: url(1.webp);
 }
 .firstSection > div{
-   width: 30%;
-   }
+    width: 30%;
+    height: 100%;
+    }
 .leftSection{
    font-size: 2rem; 
 }
@@ -58,76 +61,173 @@ nav ul li a:hover{
     color: gray;
 }
 #element{
-    color: rgb(139, 27, 244);
+    color: purple;
 }
 .secondSection{
-    max-width: 80vw;
-    margin: auto;
-    height: 80vh;
+    background-color: rgb(0, 0, 33);
+    margin: 90px 0;
+text-align: center;
+
+color: purple;
 }
-main hr{
-    border: 0;
-    background-color: #9c97f1;
-    height: 0.4px;
-    margin: 60px 84px;
-}
+
 .secondSection h1{
     font-size: 1.9rem;
+    background-image: url(1.webp);
+    padding: 60px 0;
+    margin: 90px 0;
 }
-.secondSection .box {
-             background-color: white;
-             width: 80vw;
-             height: 2px;
-             margin: 56px 0;
-             display: flex;
-}
-.secondSection .vertical {
-    height: 93px;
-    width: 1px;
-    background-color: white;
-    margin: 0 100px;
-}
-.vertical-title{
-    position: relative;
-    top: 75px;
-    width: 150px;
-}
-.vertical-title3{
-    position: relative;
-    top: 62px;
-    width: 150px;
-}
-.vertical-desc{
-    position: relative;
-    top: 86px;
-    width: 150px;
-    color: gray;
-    font-size: 15px;
+
+/* Add this CSS to your existing stylesheet or create a new CSS file */
 
 
+
+.image-container {
+    margin-bottom: 20px;
 }
-.vertical-desc3{
-    position: relative;
-    top: 70px;
-    width: 150px;
-    color: gray;
-    font-size: 15px;
+
+.image-container h2 {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 750px;
+    display: inline-block;
+    margin: 20px auto;
+}
+.bgimage{
+background-image: url(G5A5ZNjS2tE.jpg);
+margin: 60px;
+color: rgb(252, 252, 252);
+}
 
 
+
+/* Add a class to hide sections */
+.hidden {
+    display: none;
+  }
+  
+.thirdSection{ background-color: rgb(0, 0, 33);
+    padding: 60px 0;
+    margin: 90px 0;
+text-align: center;
+background-image: url(1.webp);
+color: purple;}
+
+
+.thirdSection h1{
+        font-size: 1.9rem;
+        padding: 47px 0;
+    }
+    .thirdSection p{
+        line-height: 50px;
+    }
+
+.fourthSection {
+    background-color: rgb(0, 0, 33);
+    padding: 60px 0;
+    background-image: url(1.webp);
+    margin: 90px 0;
 }
-.image1{
-    width: 23px;
-    position: relative;
-    top: -31px;
-    left: -10px;
+
+.fourthSection .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(23, 23, 61);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
-footer{
-  background-color: #0e0e1a;
-  height: 233px;
- 
+
+.fourthSection h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e2e6eb; /* Change the color to your preference */
 }
-.footer{
+
+.fourthSection p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.fourthSection .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.fourthSection .contact-info a {
+    text-decoration: none;
+    color: #007BFF; /* Change the color to your preference */
+}
+
+.fourthSection .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Default styles for desktop view */
+.desktop-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    margin: 50px 122px;
-    padding: 50px 122px;
+}
+
+.desktop-menu li {
+    margin: 0 20px;
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+    display: none; /* Hide the mobile menu button by default on larger screens */
+    cursor: pointer;
+    
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 950px) {
+    .desktop-menu {
+        display: none; /* Hide the desktop menu on smaller screens */
+    }
+
+    .mobile-menu-button {
+        display: block; /* Display the mobile menu button on smaller screens */
+        color: white;
+        width: 20px;
+        height: 20px;
+    }
+}
+.active-tab {
+    font-weight: bold;
+    color: #3370ff; /* Change the color to your desired highlight color */
+}
+
+footer {
+    background-color: rgb(0, 0, 33); /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    text-align: center;
+}
+
+.centered-footer-content {
+    max-width: 800px; /* Set the maximum width for your footer content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 40px 0;
+}
+.centered-footer-content .Sabrina{
+    font-size: 20px;
+    min-height: 43px;
+    color: rgb(235, 223, 223);
+}
+.email{
+    min-height: 43px;
+    font-size: 15px;
+    color: rgb(235, 223, 223);
+}
+.copy{
+    margin-bottom: 50px;
+    font-size: 12px;
+    color: rgb(235, 223, 223);
 }
